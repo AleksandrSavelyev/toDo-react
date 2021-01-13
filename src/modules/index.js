@@ -9,6 +9,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     saveTask: payload => dispatch(actions.saveTask(payload)),
+    deleteTask: payload => dispatch(actions.deleteTask(payload)),
+    checkedTask: payload => dispatch(actions.checkedTask(payload)),
 });
 
 export default connect (mapStateToProps, mapDispatchToProps)(Component);

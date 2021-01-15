@@ -7,9 +7,13 @@ const TasksPage = props => {
     const [id, setId] = useState(0);
 
     const addTask = () => {
-        setId(id+1);
-        props.saveTask({task, id});
-        setTask('');
+        if(task.length > 0) {
+            setId(id+1);
+            props.saveTask({task, id});
+            setTask('');
+        } else {
+            alert('введите задачу')
+        }
     }
     
     const changeInput = event => {

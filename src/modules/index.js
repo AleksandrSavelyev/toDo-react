@@ -1,7 +1,7 @@
-import Component from './TasksPge';
+import { connect } from 'react-redux';
+import Component from './TasksPge.jsx';
 import * as actions from './actions.js';
 import * as selectors from './selectors';
-import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
     tasks: selectors.getTasks(state), 
